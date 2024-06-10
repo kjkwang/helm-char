@@ -1,0 +1,30 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: "2024-06-08T04:54:53Z"
+  labels:
+    app: yang
+  name: yang
+  namespace: default
+  resourceVersion: "288288"
+  uid: 0dd6c5ec-85e4-4924-970b-e99f003cb622
+spec:
+  clusterIP: 10.111.153.245
+  clusterIPs:
+  - 10.111.153.245
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ipFamilies:
+  - IPv4
+  ipFamilyPolicy: SingleStack
+  ports:
+  - nodePort: 32453
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: yang
+  sessionAffinity: None
+  type: NodePort
+status:
+  loadBalancer: {}
