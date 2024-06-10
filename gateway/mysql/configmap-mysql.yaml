@@ -1,0 +1,1 @@
+kubectl create configmap configmap-mysql --from-literal MYSQL_USER=gateway --from-literal MYSQL_ROOT_HOST=%
